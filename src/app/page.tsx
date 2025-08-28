@@ -22,7 +22,7 @@ export default function Home() {
 
               {/*Intro */}
               <h1 className="sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center">
-                Hello, I'm Adam Colyar!
+                Hello, I&apos;m Adam Colyar!
               </h1>
 
             </div>
