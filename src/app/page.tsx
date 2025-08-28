@@ -4,25 +4,25 @@ import CircleImage from "./Components/CircleImage";
 
 export default function Home() {
   return (
-    <div className="font-sans min-h-screen">
+    <div className="font-sans">
 
       <Header />
 
-      <div className="font-sans flex flex-col items-center justify-center min-h-screen">
+      <div className="font-sans flex flex-col items-center justify-center">
 
         {/* About Me */}
-        <main className="flex-1 min-h-screen items-center sm:items-start text-black">
+        <main className="flex-1 items-center sm:items-start text-black">
           <Section id="about" theme="light">
-            <div className="flex flex-col items-center justify-center gap-25">
+            <div className="flex flex-col items-center justify-center gap-10">
 
               {/*Profile Picture */}
-              <div>
+              <div className="">
                 <CircleImage src="/images/pfp_1.jpg" alt="Profile" size={512}/>
               </div>
 
               {/*Intro */}
               <h1 className="sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center">
-                Hello! I'm Adam Colyar.
+                Hello, I'm Adam Colyar!
               </h1>
 
             </div>
