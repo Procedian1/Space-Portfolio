@@ -36,6 +36,16 @@ export default function Home() {
         {/* Projects */}
         <main className="flex-1 min-h-screen items-center sm:items-start text-black">
           {/*<ProjectsSection></ProjectsSection>*/}
+          <Section id="projects" theme="dark">
+            <div className="flex min-w-screen flex-col items-center justify-center">
+
+              {/*Temporary Sample text */}
+              <h1 className="sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center">
+                Projects
+              </h1>
+              
+            </div>
+          </Section>
         </main>
 
         {/* Involvement */}
