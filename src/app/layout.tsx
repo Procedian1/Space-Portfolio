@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Space Portfolio",
   icons: {
-    icon: "/images/favicon.svg",
+    icon: "./images/favicon.svg",
   },
 };
 
