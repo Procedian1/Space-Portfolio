@@ -30,7 +30,7 @@ export default function Header() {
                 {/* Logo */}
                 <a href="#about" className="flex-1 flex">
                     <Image
-                        src="/images/final-logo.svg"
+                        src="./images/final-logo.svg"
                         alt="Final Logo"
                         width={100}
                         height={100}

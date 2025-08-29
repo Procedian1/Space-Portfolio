@@ -17,7 +17,7 @@ export default function Home() {
 
               {/*Profile Picture */}
               <div className="">
-                <CircleImage src="/images/pfp_1.jpg" alt="Profile" size={512}/>
+                <CircleImage src="./images/pfp_1.jpg" alt="Profile" size={512}/>
               </div>
 
               {/*Intro */}

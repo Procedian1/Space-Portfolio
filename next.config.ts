@@ -1,12 +1,10 @@
 /** @type {import('next').NextConfig} */
-const isGH = process.env.GITHUB_PAGES === 'true'
-const repo = 'Space-Portfolio'
+const repo = 'Space-Portfolio';
+const isProd = process.env.NODE_ENV === 'production';
 
-const nextConfig = {
-  output: 'export',                 // produce a static site
-  images: { unoptimized: true },    // no Image Optimization on GH Pages
-  basePath: isGH ? `/${repo}` : undefined,   // needed for project pages
-  assetPrefix: isGH ? `/${repo}/` : undefined
-}
-
-export default nextConfig
+export default {
+  output: 'export',
+  images: { unoptimized: true },
+  basePath: isProd ? `/${repo}` : undefined,
+  assetPrefix: isProd ? `/${repo}/` : undefined,
+};
