@@ -19,6 +19,34 @@
   }
 }
 
+@layer components {
+
+  .header-text-size {
+    font-size: 2.0rem;
+  }
+
+  @screen md {
+    .header-text-size {
+      font-size: 1.25rem;
+    }
+  }
+
+  @screen lg {
+    .header-text-size {
+      font-size: 2rem;
+    }
+  }
+
+  .container {
+    padding: min(5em, 8%);
+    opacity: .9;
+    font-weight: bold;
+    gap: 30px;
+    display: flex;
+    align-items: center;
+  }
+}
+
 body {
   background: var(--background);
   color: var(--foreground);

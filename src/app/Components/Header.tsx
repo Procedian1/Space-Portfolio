@@ -39,7 +39,8 @@ export default function Header() {
 
                 {/* Middle links */}
                 <nav className={"flex-1 flex justify-center sm: py-1 lg:py-2"}>
-                    <ul className="flex items-center gap-30 opacity-90 text-2xl font-bold">
+                    {/*<ul className="flex items-center gap-30 opacity-90 header-text-size font-bold">*/}
+                    <ul className = "container header-text-size">
                         <li><a href="#projects" className="hover:underline underline-offset-4">Projects</a></li>
                         <li><a href="#involvement" className="hover:underline underline-offset-4">Involvement</a></li>
                         <li><a href="#extras" className="hover:underline underline-offset-4">Extras</a></li>
