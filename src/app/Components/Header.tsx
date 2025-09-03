@@ -24,8 +24,8 @@ export default function Header() {
     }, []);
 
     return (
-        <header className={`sticky top-0 z-50 transition-all ${revealed ? "translate-y-0" : "-translate-y-full"}`}>
-            <div className={"flex backdrop-blur bg-black/85"}>
+        <header className={`header ${revealed ? "slide-in" : "slide-out"}`}>
+            <div className="nav-bar">
 
                 {/* Logo */}
                 <a href="#about" className="flex-1 flex">
@@ -38,20 +38,20 @@ export default function Header() {
                 </a>
 
                 {/* Middle links */}
-                <nav className={"flex-1 flex justify-center sm: py-1 lg:py-2"}>
-                    {/*<ul className="flex items-center gap-30 opacity-90 header-text-size font-bold">*/}
-                    <ul className = "container header-text-size">
-                        <li><a href="#projects" className="hover:underline underline-offset-4">Projects</a></li>
-                        <li><a href="#involvement" className="hover:underline underline-offset-4">Involvement</a></li>
-                        <li><a href="#extras" className="hover:underline underline-offset-4">Extras</a></li>
+                <nav className={"nav"}>
+                    <ul className = "nav-list nav-text-size">
+                        <li><a href="#projects" className="nav-link">Projects</a></li>
+                        <li><a href="#involvement" className="nav-link">Involvement</a></li>
+                        <li><a href="#extras" className="nav-link">Extras</a></li>
                     </ul>
                 </nav>
 
                 {/*Contact */}
-                <div className="flex-1 flex items-center justify-end px-25 opacity-90 text-2xl font-bold">
-                    Contact Me
-                </div>
-
+                <nav className={"contact"}>
+                    <ul className = "nav-list nav-text-size">
+                        <li><a href="#contact" className="nav-link">Contact Me</a></li>
+                    </ul>
+                </nav>
             </div>
         </header>
     )

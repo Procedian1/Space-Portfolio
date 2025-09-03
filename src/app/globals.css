@@ -1,49 +1,14 @@
-@import "tailwindcss";
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #ffffff;
     --foreground: #ededed;
-  }
-}
-
-@layer components {
-
-  .header-text-size {
-    font-size: 2.0rem;
-  }
-
-  @screen md {
-    .header-text-size {
-      font-size: 1.25rem;
-    }
-  }
-
-  @screen lg {
-    .header-text-size {
-      font-size: 2rem;
-    }
-  }
-
-  .container {
-    padding: min(5em, 8%);
-    opacity: .9;
-    font-weight: bold;
-    gap: 30px;
-    display: flex;
-    align-items: center;
+    --brand-blue: #3b83f6a2;
+    --brand-blue-rgb: 59 130 246;
   }
 }
 

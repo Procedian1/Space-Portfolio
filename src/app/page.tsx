@@ -1,20 +1,19 @@
 import Header from "./Components/Header";
-//import ProjectsSection from "./Components/ProjectsSection";
 import Section from "./Components/Section";
 import CircleImage from "./Components/CircleImage";
 
 export default function Home() {
   return (
-    <div className="font-sans">
+    <div className="app">
 
       <Header />
 
-      <div className="font-sans flex flex-col items-center justify-center">
+      <div className="stack">
 
         {/* About Me */}
-        <main className="flex-1 items-center sm:items-start text-black">
+        <main className="main">
           <Section id="about" theme="light">
-            <div className="flex flex-col items-center justify-center gap-10">
+            <div className="stack gap-10">
 
               {/*Profile Picture */}
               <div className="">
@@ -22,9 +21,9 @@ export default function Home() {
               </div>
 
               {/*Intro */}
-              <h1 className="sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center">
+              <h1 className="heading-xl">
                 Hello, I&apos;m{" "}
-                <span className="text-blue-500">Adam Colyar</span>!
+                <span className="text-blue">Adam Colyar</span>!
                 <br></br>
                 Here you can see my latest works.
               </h1>
@@ -34,13 +33,13 @@ export default function Home() {
         </main>
 
         {/* Projects */}
-        <main className="flex-1 min-h-screen items-center sm:items-start text-black">
+        <main className="main min-screen">
           {/*<ProjectsSection></ProjectsSection>*/}
           <Section id="projects" theme="dark">
-            <div className="flex min-w-screen flex-col items-center justify-center">
+            <div className="stack full-width">
 
               {/*Temporary Sample text */}
-              <h1 className="sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center">
+              <h1 className="heading-xl">
                 Projects
               </h1>
               
@@ -49,12 +48,12 @@ export default function Home() {
         </main>
 
         {/* Involvement */}
-        <main className="flex-1 min-h-screen items-center sm:items-start text-black">
+        <main className="main min-screen">
           <Section id="involvement" theme="light">
-            <div className="flex min-w-screen flex-col items-center justify-center">
+            <div className="stack full-width">
 
               {/*Temporary Sample text */}
-              <h1 className="sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center">
+              <h1 className="heading-xl">
                 Involvement
               </h1>
               
@@ -63,12 +62,12 @@ export default function Home() {
         </main>
 
         {/* Extras */}
-        <main className="flex-1 min-h-screen items-center sm:items-start text-black">
+        <main className="main min-screen">
           <Section id="extras" theme="dark">
-            <div className="flex min-w-screen flex-col items-center justify-center">
+            <div className="stack full-width">
 
               {/*Temporary Sample text */}
-              <h1 className="sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center">
+              <h1 className="heading-xl">
                 Extras
               </h1>
 

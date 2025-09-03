@@ -1,0 +1,202 @@
+/* === NavBar container === */
+.nav-bar {
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background: rgba(108, 158, 238, 0.95);
+}
+
+/* === Logo  === */
+.logo-wrap {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  padding-inline: 16px;
+}
+
+/* === Right nav / contact === */
+.contact {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 25px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000000;
+}
+
+/* === Center nav === */
+.nav {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: center;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  font-weight: bold;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: #000000;
+  text-decoration: none;
+  text-underline-offset: 4px;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.nav-text-size {
+  font-size: 1rem;
+}
+
+/* === Defines heading font-sizes & nav bar font-size for screen size === */
+.heading-xl {
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 1.2;
+  color: inherit;
+  text-align: center;
+}
+
+@media (min-width: 640px) { /* sm */
+  .nav-text-size {
+    font-size: 1rem;
+  }
+  .heading-xl { font-size: 2.25rem; }
+}
+
+@media (min-width: 768px) { /* md */
+  .nav-text-size {
+    font-size: 1.25rem;
+  }
+  .heading-xl { font-size: 3rem; }
+}
+
+@media (min-width: 1024px) { /* lg */
+  .nav-text-size {
+    font-size: 2.25rem;
+  }
+  .heading-xl { font-size: 3.50rem; }
+}
+
+/* === header animations === */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  transition: transform 200ms ease;
+}
+
+.slide-in {
+  transform: translateY(0);
+}
+
+.slide-out {
+  transform: translateY(-100%);
+}
+
+/* === Base app fonts === */
+.app {
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+               Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, "Apple Color Emoji",
+               "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  color: #000;
+}
+
+/* === Generic vertical stack  === */
+.stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Spacing helper for the About block’s gap-10 */
+.gap-10 > * + * {
+  margin-top: 2.5rem;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.min-screen {
+  min-height: 100vh;
+}
+
+.full-width {
+  width: 100vw;
+}
+
+.text-blue {
+  color: rgb(var(--brand-blue-rgb));
+}
+
+/* === CircleImage component === */
+.circle-image {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.circle-image-cover {
+  object-fit: cover;
+}
+
+/* === Main Sections === */
+.section { display: block; }
+
+.vh-screen {
+  min-height: 100vh;
+  min-height: 100svh; /* mobile-friendly */
+}
+
+.section--light { background: #fff; color: #000; }
+.section--dark { background: #000; color: #fff; }
+
+.section--center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.snap-start { scroll-snap-align: start; }
+.snap-y { scroll-snap-type: y mandatory; }
+
+/* === Carousel === */
+.carousel {
+  margin-inline: auto;
+  max-width: 64rem;
+}
+
+.carousel-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;  
+}
+
+@media (min-width: 640px) {   /* sm */
+  .carousel-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {  /* lg */
+  .carousel-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.carousel-card {
+  aspect-ratio: 16 / 9;
+  border-radius: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}

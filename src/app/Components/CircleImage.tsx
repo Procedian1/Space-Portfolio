@@ -14,12 +14,12 @@ export default function CircleImage({
   priority = false,
 }: CircleImageProps) {
   return (
-    <div className="relative rounded-full overflow-hidden" style={{ width: size, height: size }}>
+    <div className="circle-image" style={{ width: size, height: size }}>
       <Image
         src={src}
         alt={alt}
         fill
-        className="object-cover"
+        className="circle-image-cover"
         priority={priority}
       />
     </div>

@@ -14,11 +14,11 @@ export default function Section({
   center = true,
   children,
 }: SectionProps) {
-  const themeClasses = theme === "light" ? "bg-white text-black" : "bg-black text-white";
-  const layoutClasses = center ? "flex items-center justify-center" : "";
+  const themeClasses = theme === "light" ? "section--light" : "section--dark";
+  const layoutClasses = center ? "section--center" : "";
 
   return (
-    <section id={id} className={`h-screen snap-start ${themeClasses} ${layoutClasses}`}>
+    <section id={id} className={`section vh-screen snap-start ${themeClasses} ${layoutClasses}`}>
       {children}
     </section>
   );
@@ -27,10 +27,12 @@ export default function Section({
 // super lightweight placeholder
 function ProjectCarousel() {
   return (
-    <div className="mx-auto max-w-5xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {Array.from({ length: 6 }).map((_, i) => (
-        <div key={i} className="aspect-video rounded-xl bg-white/5 border border-white/10" />
-      ))}
+    <div className="carousel">
+      <div className="carousel-grid">
+        {Array.from({ length: 6 }).map((_, i) => (
+          <div key={i} className="carousel-card" />
+        ))}
+      </div>
     </div>
   );
 }
