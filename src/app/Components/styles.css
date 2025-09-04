@@ -165,13 +165,14 @@
 }
 
 .text-underline {
+  color: rgb(from var(--brand-blue) r g b / 1);;
   position: relative;
 }
 
 .text-underline::after {
   position: absolute;
   content: '';
-  background: rgb(from var(--brand-blue) r g b / 1);
+  background: rgb(0, 0, 0);
   height: 5px;
   width: 100%;
   left: 0;
