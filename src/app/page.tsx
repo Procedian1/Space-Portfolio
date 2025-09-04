@@ -17,14 +17,12 @@ export default function Home() {
             <div className="stack gap-10">
 
               {/*Profile Picture */}
-              <div className="">
-                <CircleImage src="./images/pfp_1.jpg" alt="Profile Picture" size={512}/>
-              </div>
+              <CircleImage src="./images/pfp_1.jpg" alt="Profile Picture" size={512}/>
 
               {/*Intro */}
               <h1 className="heading-xl">
                 Hello, I&apos;m{" "}
-                <span className="text-blue">Adam Colyar</span>!
+                <span className="text-underline">Adam Colyar</span>!
                 <br></br>
                 Here you can see my latest works.
               </h1>

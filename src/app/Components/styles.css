@@ -40,13 +40,14 @@
   display: flex;
   align-items: center;
   gap: 50px;
-  font-weight: bold;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .nav-link {
+  font-weight: 900;
+  font-family: 'Lexend';
   color: #000000;
   text-decoration: none;
   text-underline-offset: 4px;
@@ -62,6 +63,7 @@
 
 /* === Defines heading font-sizes & nav bar font-size for screen size === */
 .heading-xl {
+  font-family: 'Lexend';
   font-weight: bold;
   font-size: 2rem;
   line-height: 1.2;
@@ -146,14 +148,41 @@
 /* === CircleImage component === */
 .circle-image {
   position: relative;
-  border: 10px solid black;
   border-radius: 50%;
   overflow: hidden;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  outline: 9px solid black;
+  outline-offset: 0;
+  box-sizing: border-box;
+  transition: outline-width .2s ease, outline-color .2s ease, outline-offset .2s ease;
+}
+
+.circle-image:hover {
+  outline: 6px solid dodgerblue;
 }
 
 .circle-image-cover {
   object-fit: cover;
+}
+
+.text-underline {
+  position: relative;
+}
+
+.text-underline::after {
+  position: absolute;
+  content: '';
+  background: rgb(from var(--brand-blue) r g b / 1);
+  height: 5px;
+  width: 100%;
+  left: 0;
+  bottom: -10;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .3s ease;
+}
+
+.circle-image:hover + h1 .text-underline::after {
+  transform: scaleX(1);
 }
 
 /* === Main Sections === */
