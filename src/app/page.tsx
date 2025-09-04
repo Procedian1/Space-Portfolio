@@ -1,11 +1,12 @@
 import Header from "./Components/Header";
 import Section from "./Components/Section";
 import CircleImage from "./Components/CircleImage";
+import ScrollPersist from './Components/ScrollPersist';
 
 export default function Home() {
   return (
     <div className="app">
-
+      <ScrollPersist /> 
       <Header />
 
       <div className="stack">
@@ -17,7 +18,7 @@ export default function Home() {
 
               {/*Profile Picture */}
               <div className="">
-                <CircleImage src="./images/pfp_1.jpg" alt="Profile" size={512}/>
+                <CircleImage src="./images/pfp_1.jpg" alt="Profile Picture" size={512}/>
               </div>
 
               {/*Intro */}

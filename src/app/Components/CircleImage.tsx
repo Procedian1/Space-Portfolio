@@ -11,7 +11,7 @@ export default function CircleImage({
   src,
   alt,
   size = 512,
-  priority = false,
+  priority = true,
 }: CircleImageProps) {
   return (
     <div className="circle-image" style={{ width: size, height: size }}>
@@ -19,7 +19,7 @@ export default function CircleImage({
         src={src}
         alt={alt}
         fill
-        className="circle-image-cover"
+        style={{ objectFit: "cover" }}
         priority={priority}
       />
     </div>
