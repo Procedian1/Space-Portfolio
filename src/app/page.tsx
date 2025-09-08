@@ -2,6 +2,8 @@ import Header from "./Components/Header";
 import Section from "./Components/Section";
 import CircleImage from "./Components/CircleImage";
 import ScrollPersist from './Components/ScrollPersist';
+import Carousel from './Components/Carousel';
+import CarouselCard from './Components/CarouselCard';
 
 export default function Home() {
   return (
@@ -23,7 +25,7 @@ export default function Home() {
               <h1 className="heading-xl">
                 Hello, I&apos;m{" "}
                 <span className="text-underline">Adam Colyar</span>!
-                <br></br>
+                <br/>
                 Here you can see my latest works.
               </h1>
 
@@ -33,28 +35,23 @@ export default function Home() {
 
         {/* Projects */}
         <main className="main min-screen">
-          {/*<ProjectsSection></ProjectsSection>*/}
-          <Section id="projects" theme="dark">
-            <div className="stack full-width">
-
-              {/*Temporary Sample text */}
-              <h1 className="heading-xl">
-                Projects
-              </h1>
-              
+          <Section id="projects" theme="dark" title="Projects" center={false}>
+            <div className="full-width">
+              <Carousel>
+                  <CarouselCard title="" description="" src="" href=""/> {/* placeholder*/}
+                  <CarouselCard title="To-do List" titleColor="white" descriptionColor="white" description="" src="./images/pfp_1.jpg" href=""/>
+                  <CarouselCard title="Calculator" titleColor="white" descriptionColor="white" description="" src="./images/pfp_1.jpg" href=""/>
+                  <CarouselCard title="Stormy-Castle" titleColor="white" descriptionColor="white" description="" src="./images/pfp_1.jpg" href=""/>
+                  <CarouselCard title="" description="" src="" href=""/> {/* placeholder*/}
+              </Carousel>
             </div>
           </Section>
         </main>
 
         {/* Involvement */}
         <main className="main min-screen">
-          <Section id="involvement" theme="light">
+          <Section id="involvement" theme="light" title="Involvement">
             <div className="stack full-width">
-
-              {/*Temporary Sample text */}
-              <h1 className="heading-xl">
-                Involvement
-              </h1>
               
             </div>
           </Section>
@@ -62,13 +59,8 @@ export default function Home() {
 
         {/* Extras */}
         <main className="main min-screen">
-          <Section id="extras" theme="dark">
+          <Section id="extras" theme="dark" title="Extras">
             <div className="stack full-width">
-
-              {/*Temporary Sample text */}
-              <h1 className="heading-xl">
-                Extras
-              </h1>
 
             </div>
           </Section>

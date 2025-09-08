@@ -116,12 +116,11 @@
   color: #000;
 }
 
-/* === Generic vertical stack  === */
-.stack {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+/* === Generic vertical stack === */ .stack { 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
 }
 
 /* Spacing helper for the About block’s gap-10 */
@@ -187,7 +186,11 @@
 }
 
 /* === Main Sections === */
-.section { display: block; }
+.section { 
+  margin-top: 2rem;
+  display: block;
+  min-height: 75vh;
+}
 
 .vh-screen {
   min-height: 100vh;
@@ -206,29 +209,57 @@
 .snap-start { scroll-snap-align: start; }
 .snap-y { scroll-snap-type: y mandatory; }
 
+.section-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.section-title {
+  flex: 0 0 auto;
+  text-align: center;  
+}
+
+.section-content {
+  flex: 1 1 auto; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
 /* === Carousel === */
 .carousel {
-  margin-inline: auto;
-  max-width: 64rem;
+  display:grid;
+  align-items: center;
+  gap: 2rem;
+  grid-template-columns: 1fr 7fr 7fr 7fr 1fr;
+  margin-inline: 2rem;
 }
 
-.carousel-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;  
-}
-
-@media (min-width: 640px) {   /* sm */
-  .carousel-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (min-width: 1024px) {  /* lg */
-  .carousel-grid { grid-template-columns: repeat(3, 1fr); }
+.carousel a{
+  text-decoration: none;
 }
 
 .carousel-card {
+  position: relative;
+  border-radius: 1.5rem;
+  aspect-ratio: 4 / 3;
+  width:100%;
+  border: 5px solid white;
+  overflow:hidden;
+}
+
+.carousel-card-content {
+  display: grid;
+  padding: .50rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-card-media {
+  position: relative;
   aspect-ratio: 16 / 9;
-  border-radius: 0.75rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  width:100%;
+  height:100%;
+  overflow:hidden;
 }

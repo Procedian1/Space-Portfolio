@@ -22,4 +22,9 @@ body {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--header-h, 100px);
+}
+
+#about {
+  scroll-margin-top: 50; /* override for top scroll */
 }

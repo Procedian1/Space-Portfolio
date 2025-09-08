@@ -2,6 +2,8 @@ import { ReactNode } from "react";
 
 type SectionProps = {
   id: string;
+  title?: string;
+  subtext?: string;
   theme?: "light" | "dark";
   center?: boolean;
   animated?: boolean;
@@ -10,6 +12,8 @@ type SectionProps = {
 
 export default function Section({
   id,
+  title,
+  subtext,
   theme = "light",
   center = true,
   children,
@@ -18,21 +22,17 @@ export default function Section({
   const layoutClasses = center ? "section--center" : "";
 
   return (
-    <section id={id} className={`section vh-screen snap-start ${themeClasses} ${layoutClasses}`}>
-      {children}
-    </section>
-  );
-}
+    <section id={id} className={`section snap-start ${themeClasses} ${layoutClasses}`}>
+      <div className="section-inner">
+        {/* Title */}
+        {title && <h1 className="section-title heading-xl">{title}</h1>}
 
-// super lightweight placeholder
-function ProjectCarousel() {
-  return (
-    <div className="carousel">
-      <div className="carousel-grid">
-        {Array.from({ length: 6 }).map((_, i) => (
-          <div key={i} className="carousel-card" />
-        ))}
+        {/* Content */}
+        {children && <div className="section-content">{children}</div>}
+  
+        {/* Subtext */}
+        {subtext && <h1 className="section-title heading-xl">{subtext}</h1>}
       </div>
-    </div>
+    </section>
   );
 }
