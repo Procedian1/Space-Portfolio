@@ -19,7 +19,7 @@ export default function Home() {
             <div className="stack gap-10" style={{alignItems: "center"}}>
 
               {/*Profile Picture */}
-              <CircleImage src="./images/pfp_1.jpg" alt="Profile Picture" size={512}/>
+              <CircleImage src="./images/pfp_1.jpg" alt="Profile Picture"/>
 
               {/*Intro */}
               <h1 className="heading-xl">
