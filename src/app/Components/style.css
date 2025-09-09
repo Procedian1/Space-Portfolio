@@ -92,6 +92,20 @@
   .heading-xl { font-size: 3.50rem; }
 }
 
+@media (max-width: 768px) {
+  .carousel {
+    grid-auto-flow: column;
+    grid-template-columns: none;  /* let columns auto-size */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding-inline: 1rem;
+    margin-inline: 0;
+  }
+  .carousel > * { scroll-snap-align: center; }
+}
+
+
 /* === header animations === */
 .header {
   position: sticky;
@@ -116,10 +130,11 @@
   color: #000;
 }
 
-/* === Generic vertical stack === */ .stack { 
+/* === Generic vertical stack === */ 
+.stack { 
   display: flex; 
   flex-direction: column; 
-  align-items: center; 
+  align-items: stretch;
   justify-content: center; 
 }
 
@@ -137,7 +152,7 @@
 }
 
 .full-width {
-  width: 100vw;
+  width: 100%;
 }
 
 .text-blue {
@@ -150,7 +165,7 @@
   border-radius: 50%;
   overflow: hidden;
   outline: 9px solid black;
-  outline-offset: 0;
+  outline-offset: -1px;
   box-sizing: border-box;
   transition: outline-width .2s ease, outline-color .2s ease, outline-offset .2s ease;
 }
@@ -232,7 +247,8 @@
   display:grid;
   align-items: center;
   gap: 2rem;
-  grid-template-columns: 1fr 7fr 7fr 7fr 1fr;
+  grid-template-columns:
+    minmax(0,1fr) minmax(0,7fr) minmax(0,7fr) minmax(0,7fr) minmax(0,1fr);
   margin-inline: 2rem;
 }
 
@@ -241,6 +257,8 @@
 }
 
 .carousel-card {
+  display:grid;
+  grid-template-rows: var(--card-header-h) 1fr;
   position: relative;
   border-radius: 1.5rem;
   aspect-ratio: 4 / 3;
@@ -254,11 +272,12 @@
   padding: .50rem;
   justify-content: center;
   align-items: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .carousel-card-media {
   position: relative;
-  aspect-ratio: 16 / 9;
   width:100%;
   height:100%;
   overflow:hidden;

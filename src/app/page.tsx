@@ -16,7 +16,7 @@ export default function Home() {
         {/* About Me */}
         <main className="main">
           <Section id="about" theme="light">
-            <div className="stack gap-10">
+            <div className="stack gap-10" style={{alignItems: "center"}}>
 
               {/*Profile Picture */}
               <CircleImage src="./images/pfp_1.jpg" alt="Profile Picture" size={512}/>
@@ -38,11 +38,11 @@ export default function Home() {
           <Section id="projects" theme="dark" title="Projects" center={false}>
             <div className="full-width">
               <Carousel>
-                  <CarouselCard title="" description="" src="" href=""/> {/* placeholder*/}
+                  <CarouselCard title="" description="" href=""/> {/* placeholder*/}
                   <CarouselCard title="To-do List" titleColor="white" descriptionColor="white" description="" src="./images/pfp_1.jpg" href=""/>
                   <CarouselCard title="Calculator" titleColor="white" descriptionColor="white" description="" src="./images/pfp_1.jpg" href=""/>
                   <CarouselCard title="Stormy-Castle" titleColor="white" descriptionColor="white" description="" src="./images/pfp_1.jpg" href=""/>
-                  <CarouselCard title="" description="" src="" href=""/> {/* placeholder*/}
+                  <CarouselCard title="" description="" href=""/> {/* placeholder*/}
               </Carousel>
             </div>
           </Section>

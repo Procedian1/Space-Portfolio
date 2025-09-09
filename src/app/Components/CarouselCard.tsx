@@ -8,7 +8,7 @@ type CarouselProps = {
     descriptionColor?: string; 
     backgroundColor?: string;
     href: string;
-    src: string;
+    src?: string;
 };
 
 export default function CarouselCard ( {
@@ -32,7 +32,7 @@ export default function CarouselCard ( {
                 </div>
 
                 {/* Card media */}
-                <div className="carousel-card-media">
+                {src && <div className="carousel-card-media">
                     <Image
                     src={src}
                     alt={title}
@@ -40,7 +40,7 @@ export default function CarouselCard ( {
                     style={{objectFit: "cover"}}
                     priority={false}
                     />
-                </div>
+                </div>}
             </section>
         </a>
     );

@@ -1,6 +1,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --card-header-h: clamp(56px, 8vw, 86px);
 }
 
 @media (prefers-color-scheme: dark) {
