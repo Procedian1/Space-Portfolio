@@ -137,6 +137,7 @@
   flex-direction: column; 
   align-items: stretch;
   justify-content: center; 
+  width: 100%;
 }
 
 /* Spacing helper for the About block’s gap-10 */
@@ -208,7 +209,7 @@
   margin-top: 2rem;
   display: block;
   min-height: 75vh;
-  width: 100%;
+  width: 100%
 }
 
 .vh-screen {
@@ -232,7 +233,6 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: 100%;
 }
 
 .section-title {
