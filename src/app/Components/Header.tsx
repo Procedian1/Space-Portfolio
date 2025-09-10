@@ -28,7 +28,7 @@ export default function Header() {
         <div />
         {/* Logo */}
         <a href="#about" className="flex-1">
-          <Image src="/images/final-logo.svg" alt="Final Logo" width={100} height={100} />
+          <Image src="./images/final-logo.svg" alt="Final Logo" width={100} height={100} />
         </a>
 
         {/* Middle links */}
