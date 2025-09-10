@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function HeaderStatic() {
   return (
-    <div id="header-static" className="header-static">
+    <div id="header-static" style={{paddingTop: 10}}className="header-static">
       <div className="nav-bar-white">
         <div />
         {/* Logo */}
@@ -22,7 +22,7 @@ export default function HeaderStatic() {
 
         {/* Contact */}
         <nav className="contact">
-          <div className="nav-list nav-text-size contact-style">
+          <div className="nav-list nav-text-size contact-style-white">
             <a href="#contact" className="default-text">Contact Me</a>
           </div>
         </nav>
