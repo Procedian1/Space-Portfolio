@@ -206,10 +206,9 @@
 
 /* === Main Sections === */
 .section { 
-  margin-top: 2rem;
   display: block;
-  min-height: 75vh;
-  width: 100%
+  width: 100%;
+  padding-bottom: 5rem;
 }
 
 .vh-screen {
@@ -248,40 +247,42 @@
 }
 
 /* === Carousel === */
-.carousel {
+.card-container {
   display:grid;
   align-items: center;
   gap: 2rem;
-  grid-template-columns:
-    minmax(0,1fr) minmax(0,7fr) minmax(0,7fr) minmax(0,7fr) minmax(0,1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-inline: 2rem;
 }
 
-.carousel a{
+.card-container a{
   text-decoration: none;
 }
 
-.carousel-card {
+.card {
   display:grid;
-  grid-template-rows: var(--card-header-h) 1fr;
   position: relative;
+  grid-template-rows: 1fr 2fr;
+  gap: 1rem;
   border-radius: 1.5rem;
   aspect-ratio: 4 / 3;
   width:100%;
   border: 5px solid white;
   overflow:hidden;
+  padding-bottom: 5px;
 }
 
-.carousel-card-content {
+.card-content {
   display: grid;
-  padding: .50rem;
   justify-content: center;
   align-items: center;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  font-size: clamp(150%, 3vw, 8rem);
+  overflow-y: auto;
+  overflow-x: clip;
+  font-weight: 700;
 }
 
-.carousel-card-media {
+.card-media {
   position: relative;
   width:100%;
   height:100%;

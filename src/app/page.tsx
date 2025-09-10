@@ -2,8 +2,7 @@ import Header from "./Components/Header";
 import Section from "./Components/Section";
 import CircleImage from "./Components/CircleImage";
 import ScrollPersist from './Components/ScrollPersist';
-import Carousel from './Components/Carousel';
-import CarouselCard from './Components/CarouselCard';
+import Card from "./Components/Card";
 
 export default function Home() {
   return (
@@ -16,7 +15,7 @@ export default function Home() {
         {/* About Me */}
         <main className="main">
           <Section id="about" theme="light">
-            <div className="stack gap-10" style={{alignItems: "center"}}>
+            <div className="stack gap-10" style={{minHeight: '75vh', paddingTop: '5rem', alignItems: "center"}}> {/* Center image */}
 
               {/*Profile Picture */}
               <CircleImage src="./images/pfp_1.jpg" alt="Profile Picture"/>
@@ -35,15 +34,11 @@ export default function Home() {
 
         {/* Projects */}
         <main className="main min-screen">
-          <Section id="projects" theme="dark" title="Projects" center={false}>
-            <div className="full-width">
-              <Carousel>
-                  <CarouselCard title="" description="" href=""/> {/* placeholder*/}
-                  <CarouselCard title="To-do List" titleColor="white" descriptionColor="white" description="" src="./images/pfp_1.jpg" href=""/>
-                  <CarouselCard title="Calculator" titleColor="white" descriptionColor="white" description="" src="./images/pfp_1.jpg" href=""/>
-                  <CarouselCard title="Stormy-Castle" titleColor="white" descriptionColor="white" description="" src="./images/pfp_1.jpg" href=""/>
-                  <CarouselCard title="" description="" href=""/> {/* placeholder*/}
-              </Carousel>
+          <Section id="projects" theme="dark" title="Featured Projects" center={false}>
+            <div className="card-container">
+                <Card title="To-do List" titleColor="black" descriptionColor="white" description="" src="./images/light-todo-svgrepo-com.svg" href=""/>
+                <Card title="Calculator" titleColor="black" descriptionColor="white" description="" src="./images/calculator-svgrepo-com.svg" href=""/>
+                <Card title="Stormy-Castle" titleColor="black" descriptionColor="white" description="" src="./images/castle-svgrepo-com.svg" href=""/>
             </div>
           </Section>
         </main>
