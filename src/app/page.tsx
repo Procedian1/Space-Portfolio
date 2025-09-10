@@ -1,4 +1,5 @@
 import Header from "./Components/Header";
+import HeaderStatic from "./Components/HeaderStatic";
 import Section from "./Components/Section";
 import CircleImage from "./Components/CircleImage";
 import ScrollPersist from './Components/ScrollPersist';
@@ -8,6 +9,9 @@ export default function Home() {
   return (
     <div className="app">
       <ScrollPersist /> 
+
+      <HeaderStatic />
+      <div id="header-trigger" style={{ height: 1 }} aria-hidden="true" />
       <Header />
 
       <div className="stack">

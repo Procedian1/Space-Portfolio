@@ -1,5 +1,5 @@
 /* === NavBar container === */
-.nav-bar {
+.nav-bar-blue {
   display: grid;
   grid-template-columns: 1fr auto 2fr 3fr 1fr;
   column-gap: clamp(8px, 2vw, 24px);
@@ -7,6 +7,16 @@
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   background: rgba(108, 158, 238, 0.95);
+}
+
+.nav-bar-white {
+  display: grid;
+  grid-template-columns: 1fr auto 2fr 3fr 1fr;
+  column-gap: clamp(8px, 2vw, 24px);
+  align-items: center;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.95);
 }
 
 /* === Logo  === */
@@ -129,17 +139,33 @@
 
 
 /* === header animations === */
-.header {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  z-index: 50;
-  transition: transform 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+.header-dynamic {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.45s cubic-bezier(0.33, 1, 0.68, 1), opacity 0.2s ease;
   will-change: transform;
+  pointer-events: none;
 }
 
-.header--peek {
-  transform: translateY(calc(-1 * var(--header-hide-pct)));
+.header-dynamic.slide-in {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto; 
+}
+
+.header-dynamic.slide-out {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.header-static {
+  position: relative;
+  width: 100%;
+  z-index: 1; 
 }
 
 .slide-in {

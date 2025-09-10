@@ -1,30 +1,10 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
-export default function Header() {
-  const [revealed, setRevealed] = useState(false);
-  const observer = useRef<IntersectionObserver | null>(null);
-
-  useEffect(() => {
-    const target = document.getElementById("header-static");
-    if (!target) return;
-
-    observer.current = new IntersectionObserver(
-      ([entry]) => {
-        // If static header is visible, HIDE overlay; else SHOW overlay
-        setRevealed(!entry.isIntersecting);
-      },
-      { threshold: 0 } // trigger as soon as any part appears/disappears
-    );
-
-    observer.current.observe(target);
-    return () => observer.current?.disconnect();
-  }, []);
-
+export default function HeaderStatic() {
   return (
-    <header className={`header-dynamic ${revealed ? "slide-in" : "slide-out"}`} aria-hidden={!revealed}>
-      <div className="nav-bar-blue">
+    <div id="header-static" className="header-static">
+      <div className="nav-bar-white">
         <div />
         {/* Logo */}
         <a href="#about" className="flex-1">
@@ -47,6 +27,6 @@ export default function Header() {
           </div>
         </nav>
       </div>
-    </header>
+    </div>
   );
 }
