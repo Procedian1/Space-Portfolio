@@ -6,7 +6,6 @@ type CardProps = {
     titleColor?: string; 
     description?: string;
     descriptionColor?: string; 
-    backgroundColor?: string;
     href: string;
     src?: string;
 };
@@ -17,13 +16,12 @@ export default function Card ( {
     description,
     descriptionColor = "black",
     href,
-    backgroundColor = "rgb(from var(--brand-blue) r g b / 1)",
     src,
 }: CardProps) {
     
     return (
             <a href={href}>
-                <section className = "card" style={{backgroundColor}}>
+                <section className = "card">
                     {/* Card content */}
                     <div className="card-content">
                         <div style={{color: titleColor}}> {title} </div>

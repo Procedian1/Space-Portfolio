@@ -33,7 +33,7 @@ export default function Home() {
         </main>
 
         {/* Projects */}
-        <main className="main min-screen">
+        <main className="main">
           <Section id="projects" theme="dark" title="Featured Projects" center={false}>
             <div className="card-container">
                 <Card title="To-do List" titleColor="black" descriptionColor="white" description="" src="./images/light-todo-svgrepo-com.svg" href=""/>
@@ -44,7 +44,7 @@ export default function Home() {
         </main>
 
         {/* Involvement */}
-        <main className="main min-screen">
+        <main className="main">
           <Section id="involvement" theme="light" title="Involvement">
             <div className="stack full-width">
               
@@ -53,7 +53,7 @@ export default function Home() {
         </main>
 
         {/* Extras */}
-        <main className="main min-screen">
+        <main className="main">
           <Section id="extras" theme="dark" title="Extras">
             <div className="stack full-width">
 
