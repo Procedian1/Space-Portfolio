@@ -1,10 +1,9 @@
-import Header from "./Components/Header";
-import HeaderStatic from "./Components/HeaderStatic";
-import Section from "./Components/Section";
-import CircleImage from "./Components/CircleImage";
-import ScrollPersist from './Components/ScrollPersist';
-import Card from "./Components/Card";
-import ProjectsGrid from "./Components/ProjectsGrid";
+import Header from "./components/Header";
+import HeaderStatic from "./components/HeaderStatic";
+import Section from "./components/Section";
+import CircleImage from "./components/CircleImage";
+import ScrollPersist from './components/ScrollPersist';
+import ProjectsGrid from "./components/ProjectsGrid";
 
 export default function Home() {
   return (

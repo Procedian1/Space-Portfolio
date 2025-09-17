@@ -1,12 +1,21 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import "./Components/style.css"; 
+import "./components/style.css"; 
+import { Cabin_Sketch } from "next/font/google";
+import ClientTransition from "./components/ClientTransition";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
+
+const cabinSketch = Cabin_Sketch({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-cabin-sketch",
+});
+
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -28,9 +37,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${cabinSketch.variable} antialiased`}
       >
-        {children}
+        <ClientTransition>{children}</ClientTransition>
       </body>
     </html>
   );

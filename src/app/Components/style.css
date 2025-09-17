@@ -411,3 +411,61 @@
 }
 
 .comingsoon h3 { font-size: 1.25rem; }
+
+
+/* === To-do list === */
+.todo-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+}
+
+.opening-text {
+  font-family: var(--font-cabin-sketch), cursive;
+  color: black;
+  overflow: hidden;
+  transform: translateY(33vh);
+  white-space: nowrap;
+  font-size: clamp(.5rem, 15vw, 6rem);
+  animation: 
+    typing .75s steps(500, end) forwards, blink step-end infinite,
+    slideUp 1.5s ease forwards;
+}
+
+.opening-text::after {
+  font-size: clamp(.5rem, 15vw, 5rem);
+}
+
+@keyframes typing {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(33vh);
+  }
+  to {
+    transform: translateY(2vh);
+  }
+}
+
+/* === main todo page === */
+.todo-body {
+  display: grid;
+  place-items: center;
+  min-height: 70svh;
+  opacity: 0;
+  transform: translateY(1rem);
+  animation: fadeIn 1.5s ease forwards;
+  animation-delay: 1.5s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

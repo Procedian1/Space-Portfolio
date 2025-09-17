@@ -32,7 +32,7 @@ export default function Card ( {
     const Wrapper: React.ElementType = href ? 'a' : 'button';
     
     return (
-        <Wrapper href={href as any} onClick={clickable ? handleClick : undefined} className="card" style={{textAlign: "left"}} {...(!href ? {type: "button"} : {})}>
+        <Wrapper href={href || ""} onClick={href || onOpen ? handleClick : undefined} className="card" {...(!href ? { type: "button" } : {})}>
                     <div className="card-content">
                         <div className="card-title" style={{color: titleColor}}> {title} </div>
                         {description && <div style={{color: descriptionColor}}> {description} </div>}
