@@ -4,6 +4,7 @@ import Section from "./Components/Section";
 import CircleImage from "./Components/CircleImage";
 import ScrollPersist from './Components/ScrollPersist';
 import Card from "./Components/Card";
+import ProjectsGrid from "./Components/ProjectsGrid";
 
 export default function Home() {
   return (
@@ -39,11 +40,7 @@ export default function Home() {
         {/* Projects */}
         <main className="main">
           <Section id="projects" theme="dark" title="Featured Projects" center={false}>
-            <div className="card-container">
-                <Card title="To-do List" titleColor="black" descriptionColor="white" description="" src="./images/light-todo-svgrepo-com.svg" href=""/>
-                <Card title="Calculator" titleColor="black" descriptionColor="white" description="" src="./images/calculator-svgrepo-com.svg" href=""/>
-                <Card title="Stormy-Castle" titleColor="black" descriptionColor="white" description="" src="./images/castle-svgrepo-com.svg" href=""/>
-            </div>
+            <ProjectsGrid />
           </Section>
         </main>
 

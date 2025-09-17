@@ -6,8 +6,9 @@ type CardProps = {
     titleColor?: string; 
     description?: string;
     descriptionColor?: string; 
-    href: string;
+    href?: string;
     src?: string;
+    onOpen?: () => void;
 };
 
 export default function Card ( {
@@ -17,14 +18,23 @@ export default function Card ( {
     descriptionColor = "black",
     href,
     src,
+    onOpen
 }: CardProps) {
+    const clickable = Boolean(onOpen || href);
+
+    const handleClick = (e: React.MouseEvent) => {
+        if (onOpen) {
+            e.preventDefault();
+            onOpen();
+        }
+    }
+
+    const Wrapper: React.ElementType = href ? 'a' : 'button';
     
     return (
-            <a href={href}>
-                <section className = "card">
-                    {/* Card content */}
+        <Wrapper href={href as any} onClick={clickable ? handleClick : undefined} className="card" style={{textAlign: "left"}} {...(!href ? {type: "button"} : {})}>
                     <div className="card-content">
-                        <div style={{color: titleColor}}> {title} </div>
+                        <div className="card-title" style={{color: titleColor}}> {title} </div>
                         {description && <div style={{color: descriptionColor}}> {description} </div>}
                     </div>
 
@@ -38,7 +48,6 @@ export default function Card ( {
                         priority={false}
                         />
                     </div>}
-                </section>
-            </a>
+        </Wrapper>
     );
 }
