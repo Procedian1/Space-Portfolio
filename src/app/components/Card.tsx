@@ -42,7 +42,7 @@ export default function Card ( {
                     {/* Card media */}
                     {src && <div className="card-media">
                         <Image
-                        src={src.startsWith("/") ? src : `/${src.replace(/^.\//, "")}`}
+                        src={src}
                         alt={title}
                         fill
                         style={{aspectRatio: "1 / 1", objectFit: "contain"}}
