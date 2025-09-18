@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 
 type CardProps = {
     title: string;
@@ -29,10 +30,10 @@ export default function Card ( {
         }
     }
 
-    const Wrapper: React.ElementType = href ? 'a' : 'button';
+    const Wrapper: React.ElementType = href ? Link : "button";
     
     return (
-        <Wrapper href={href || ""} onClick={href || onOpen ? handleClick : undefined} className="card" {...(!href ? { type: "button" } : {})}>
+        <Wrapper {...(href ? { href } : { type: "button" })} onClick={onOpen ? handleClick : undefined} className="card">
                     <div className="card-content">
                         <div className="card-title" style={{color: titleColor}}> {title} </div>
                         {description && <div style={{color: descriptionColor}}> {description} </div>}
@@ -41,7 +42,7 @@ export default function Card ( {
                     {/* Card media */}
                     {src && <div className="card-media">
                         <Image
-                        src={src}
+                        src={src.startsWith("/") ? src : `/${src.replace(/^.\//, "")}`}
                         alt={title}
                         fill
                         style={{aspectRatio: "1 / 1", objectFit: "contain"}}
