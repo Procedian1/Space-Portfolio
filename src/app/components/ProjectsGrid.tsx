@@ -5,9 +5,9 @@ import Card from './Card';
 import Modal from './Modal';
 
 const projects = [
-  { title: "To-do List", img: "/images/light-todo-svgrepo-com.svg", href: "/projects/todo" },
-  { title: "Calculator", img: "/images/calculator-svgrepo-com.svg", href: "/projects/calculator" },
-  { title: "Stormy-Castle", img: "/images/castle-svgrepo-com.svg", href: "/projects/stormy-castle" },
+  { title: "To-do List", img: "./images/light-todo-svgrepo-com.svg", href: "/projects/todo" },
+  { title: "Calculator", img: "./images/calculator-svgrepo-com.svg", href: "/projects/calculator" },
+  { title: "Stormy-Castle", img: "./images/castle-svgrepo-com.svg", href: "/projects/stormy-castle" },
 ];
 
 export default function ProjectsGrid() {
@@ -24,18 +24,18 @@ return (
       <div className="card-container">
         <Card
           title="To-do List"
-          src="/images/light-todo-svgrepo-com.svg"
+          src="./images/light-todo-svgrepo-com.svg"
           href="/projects/todo"
         />
         <Card
           title="Calculator"
-          src="/images/calculator-svgrepo-com.svg"
+          src="./images/calculator-svgrepo-com.svg"
           href="/projects/calculator"
           onOpen={() => openComingSoon("Calculator")}
         />
         <Card
           title="Stormy-Castle"
-          src="/images/castle-svgrepo-com.svg"
+          src="./images/castle-svgrepo-com.svg"
           href="/projects/stormy-castle"
           onOpen={() => openComingSoon("Stormy-Castle")}
         />
